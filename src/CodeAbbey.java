@@ -128,6 +128,7 @@ public class Main {
     }
 }
  */
+/*
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -155,3 +156,45 @@ public class Main {
         }
     }
 }
+ */
+import java.util.Scanner;
+class BMI{
+    static Scanner sc = new Scanner(System.in);
+
+    static int size = sc.nextInt();
+    static int [] weight = new int[size];
+    static double [] height = new double[size];
+
+
+    public static void bodyMI(){
+
+          for (int i = 0; i < size; i++) {
+
+              BMI.weight[i] = sc.nextInt();
+              BMI.height[i] = sc.nextDouble();
+          }
+          for (int i = 0; i < size; i++) {
+              double BMI = weight[i] / (height[i] * height[i]);
+
+              if (BMI < 18.5){
+                  System.out.println("under" + " ");
+              } else if (BMI >= 18.5 && BMI < 25.0){
+                  System.out.println("normal" + " ");
+              } else if (BMI >= 25.0 && BMI < 30.0){
+                  System.out.println("over" + " ");
+              } else {
+                  System.out.println("obese" + " ");
+              }
+          }
+    }
+}
+public class CodeAbbey {
+    public static void main(String[] args) {
+
+        BMI.bodyMI();
+    }
+}
+
+
+
+
