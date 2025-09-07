@@ -83,7 +83,7 @@ public class Main {
     }
 }
  */
-import java.util.Arrays;
+/*
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -101,6 +101,57 @@ public class Main {
         for (int i = 0; i < size; i++){
             arr3[i] = Math.min(arr1[i], arr2[i]);
             System.out.println(arr3[i]+ " ");
+        }
+    }
+}
+ */
+/*
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int [] arr = new int[300];
+        int $minVal = 0;
+        int $maxVal = 0;
+        for (int i = 0; i < arr.length; i++){
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i] > $maxVal){
+                $maxVal = arr[i];
+            } else if (arr[i] < $minVal && arr[i] != $maxVal){
+                $minVal = arr[i];
+            }
+        }
+        System.out.println($maxVal + " " + $minVal);
+    }
+}
+ */
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int [] arr1 = new int[size];
+        int [] arr2 = new int[size];
+        int [] arr3 = new int[size];
+        for (int i = 0; i < size; i++){
+            arr1[i] = sc.nextInt();
+            arr2[i] = sc.nextInt();
+            arr3[i] = sc.nextInt();
+        }
+        int sum = 0;
+        for (int i = 0; i < size; i++){
+            int result = arr1[i] * arr2[i] + arr3[i]; //113
+
+            while(result != 0) {
+                sum += result % 10; //3 + 1 + 1 = 5 ---  1 % 10 = 1
+                result = result / 10; //0
+            }
+            System.out.println(sum + " ");
+            sum -= sum;
         }
     }
 }
