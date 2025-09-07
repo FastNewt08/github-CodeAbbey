@@ -23,13 +23,15 @@ public class Main{
         int [] arr2 = new int[size];
 
         for (int i = 0; i < size; i++){
-            arr1[i] = sc.nextInt(); sc.nextLine();
+            arr1[i] = sc.nextInt();
+            arr2[i] = sc.nextInt();
         }
+
         for (int i = 0; i < size; i++){
-            arr2[i] = sc.nextInt(); sc.nextLine();
-        }
-        for (int i = 0; i < size; i++){
-            System.out.println(arr1[i] + arr2[i]);
+            if (i > 0) {
+                System.out.print(" ");
+            }
+            System.out.print(arr1[i] + arr2[i]);
         }
     }
 }
