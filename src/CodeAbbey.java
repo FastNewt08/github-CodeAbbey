@@ -157,6 +157,7 @@ public class Main {
     }
 }
  */
+/*
 import java.util.Scanner;
 class BMI{
     static Scanner sc = new Scanner(System.in);
@@ -194,7 +195,48 @@ public class CodeAbbey {
         BMI.bodyMI();
     }
 }
+ */
+/*
+import java.util.Scanner;
+public class CodeAbbey {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
+        int size = sc.nextInt();
 
+        int [] nums = new int[size];
+
+        for (int i = 0; i < size; i++){
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int c = sc.nextInt();
+
+            nums[i] = Math.min(a, Math.min(b,c));
+        }
+        for (int i = 0; i < size; i++){
+            System.out.println(nums[i] + " ");
+        }
+    }
+}
+ */
+import java.util.Map;
+import java.util.Scanner;
+public class CodeAbbey {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+
+        int [] fahrenheit = new int[size];
+
+        for (int i = 0; i < size; i++){
+            fahrenheit[i] = sc.nextInt();
+        }
+        for (int i = 0; i < size; i++){
+            int celsius = (int) Math.round((fahrenheit[i] - 32) * 5.0 / 9);
+            System.out.println(celsius + " ");
+        }
+    }
+}
 
 
