@@ -1,3 +1,7 @@
+
+import java.util.Objects;
+import java.util.Scanner;
+
 public class StudentDemo {
     public static void main(String[] args) {
        Student s1 = new Student("Arel", 10, "0303", 32);
